@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import { Home, Building2, Sparkles, Package, Briefcase, Utensils } from 'lucide-react'
 import FadeIn from '../components/FadeIn'
-import resImg from '../assets/res.png'
-import comImg from '../assets/com.png'
-import deepImg from '../assets/deep.png'
-import moveImg from '../assets/move.png'
-import foodImg from '../assets/food.png'
-import ofImg from '../assets/of.png'
+import resImg from '../assets/res.jpg'
+import comImg from '../assets/com.jpg'
+import deepImg from '../assets/deep.jpg'
+import moveImg from '../assets/move.jpg'
+import foodImg from '../assets/food.jpg'
+import ofImg from '../assets/of.jpg'
 
 const services = [
   {

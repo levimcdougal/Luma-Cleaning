@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import { Home, Building2, Sparkles, Package, Star } from 'lucide-react'
-import cleanImg from '../assets/clean.png'
+import cleanImg from '../assets/clean.jpg'
 import FadeIn from '../components/FadeIn'
-import heroBg from '../assets/back.png'
+import heroBg from '../assets/back.jpg'
 
 const reviews = [
   {
