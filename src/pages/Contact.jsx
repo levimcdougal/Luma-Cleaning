@@ -22,10 +22,10 @@ const contactMethods = [
   {
     Icon: Mail,
     label: 'Email Us',
-    value: 'lumacleaning@gmail.com',
+    value: 'lumaclean216@gmail.com',
     desc: 'Drop us an email for quotes, questions, or scheduling.',
     btnLabel: 'Send Email',
-    href: 'mailto:lumacleaning@gmail.com',
+    href: 'mailto:lumaclean216@gmail.com',
   },
 ]
 

@@ -38,7 +38,7 @@ export default function Footer() {
               <MessageSquare size={13} style={{ marginRight: 6, verticalAlign: 'middle' }} />
               216-727-8438<br />
               <Mail size={13} style={{ marginRight: 6, verticalAlign: 'middle' }} />
-              lumacleaning@gmail.com
+              lumaclean216@gmail.com
             </p>
           </div>
         </div>
