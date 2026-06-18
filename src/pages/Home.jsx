@@ -106,14 +106,14 @@ export default function HomePage() {
               <p className="section-label">Why Choose Luma</p>
               <h2 className="section-title">The Luma Standard</h2>
               <p className="why-body">
-                Luma was built on one belief: every space deserves to shine. Over 7 years, we've
+                Luma was built on one belief: every space deserves to shine. Over 3 years, we've
                 served hundreds of clients across Ohio and surrounding areas
                 — earning our reputation through consistency, care, and results that speak for themselves.
               </p>
               <p className="why-body">
-                When you book with Luma, you're not just hiring a cleaning crew. You're getting a
-                reliable partner who shows up on time, pays attention to the details others miss, and
-                doesn't leave until your space looks exactly the way it should.
+                When you book with Luma, you're working directly with the person who cleans your space.
+                That means a reliable partner who shows up on time, pays attention to the details others
+                miss, and doesn't leave until your space looks exactly the way it should.
               </p>
               <Link to="/contact" className="btn-primary why-cta">Get a Free Quote</Link>
             </div>

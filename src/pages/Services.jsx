@@ -95,6 +95,63 @@ const services = [
   },
 ]
 
+const pricingPlans = [
+  {
+    badge: 'Most Popular',
+    featured: true,
+    title: 'Standard Cleaning',
+    subtitle: 'Priced By Home Layout',
+    desc: 'Dusting, vacuuming, mopping, kitchen surface wiping, and bathroom cleaning — the dependable refresh.',
+    rows: [
+      { name: '1 Bed / 1 Bath', price: '$100' },
+      { name: '2 Bed / 2 Bath', price: '$140' },
+      { name: '3 Bed / 2 Bath', price: '$180' },
+      { name: '4 Bed / 2+ Bath', price: '$220' },
+    ],
+  },
+  {
+    badge: 'Specialty Reset',
+    featured: false,
+    title: 'Premium Specialty Resets',
+    subtitle: 'Deep Clean & Move-In/Out',
+    desc: 'Perfect for first-time clients or moving days. The full Luma-touch detail across every surface.',
+    rows: [
+      { name: 'Deep Cleaning', price: '$250+' },
+      { name: 'Move-In / Move-Out', price: '$300+' },
+      { name: 'Baseboards & Doors', price: 'Included' },
+      { name: 'Sanitized Appliances', price: 'Included' },
+    ],
+  },
+  {
+    badge: 'Business Grade',
+    featured: false,
+    title: 'Commercial & Post-Construction',
+    subtitle: 'Customized To Your Site',
+    desc: 'Offices, retail floors, and post-construction jobs handled with industrial care and strict checklists.',
+    rows: [
+      { name: 'Office & Commercial', price: '$40 / hr' },
+      { name: 'Post-Construction', price: '$0.45–$0.75 / sq ft' },
+      { name: 'Project Minimum', price: '$300+' },
+      { name: 'Dust, Trim & Detailing', price: 'Included' },
+    ],
+  },
+]
+
+const addOns = [
+  { name: 'Inside Refrigerator', price: '$35' },
+  { name: 'Inside Oven', price: '$50' },
+  { name: 'Interior Windows', price: '$5 / window' },
+  { name: 'Laundry', price: '$25 / load' },
+  { name: 'Pet Hair Removal', price: '$25+' },
+  { name: 'Trash Removal', price: '$20+' },
+]
+
+const discounts = [
+  { name: 'Weekly Cleaning', off: '15% OFF' },
+  { name: 'Bi-Weekly Cleaning', off: '10% OFF' },
+  { name: 'Monthly Cleaning', off: '5% OFF' },
+]
+
 export default function Services() {
   return (
     <main className="page-wrapper">
@@ -129,6 +186,59 @@ export default function Services() {
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="section section-alt">
+        <div className="section-inner">
+          <FadeIn><div className="section-header">
+            <p className="section-label">Pricing</p>
+            <h2 className="section-title">Simple, Transparent Pricing</h2>
+            <p className="section-subtitle">No hidden fees. No surprises. Just a fair price for a brilliant clean.</p>
+          </div></FadeIn>
+
+          <FadeIn delay={100}><div className="pricing-grid">
+            {pricingPlans.map(({ badge, featured, title, subtitle, desc, rows }) => (
+              <div className={`pricing-card${featured ? ' pricing-card-featured' : ''}`} key={title}>
+                <span className="pricing-badge">{badge}</span>
+                <h3>{title}</h3>
+                <p className="pricing-subtitle">{subtitle}</p>
+                <p className="pricing-desc">{desc}</p>
+                <div className="pricing-divider" />
+                <div className="pricing-rows">
+                  {rows.map(({ name, price }) => (
+                    <div className="pricing-row" key={name}>
+                      <span className="pricing-row-name">{name}</span>
+                      <span className="pricing-row-price">{price}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div></FadeIn>
+
+          <FadeIn delay={200}><div className="pricing-extras">
+            <div className="pricing-addons">
+              <h4>Add-On Services</h4>
+              {addOns.map(({ name, price }) => (
+                <div className="pricing-row" key={name}>
+                  <span className="pricing-row-name">{name}</span>
+                  <span className="pricing-row-price">{price}</span>
+                </div>
+              ))}
+            </div>
+            <div className="pricing-discounts">
+              <h4>Recurring Service Discounts</h4>
+              {discounts.map(({ name, off }) => (
+                <div className="pricing-row" key={name}>
+                  <span className="pricing-row-name">{name}</span>
+                  <span className="pricing-discount-badge">{off}</span>
+                </div>
+              ))}
+              <p className="pricing-discount-note">Save more by scheduling regular visits with Luma.</p>
+            </div>
+          </div></FadeIn>
         </div>
       </section>
 
