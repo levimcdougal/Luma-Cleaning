@@ -116,7 +116,7 @@ const pricingPlans = [
     subtitle: 'Deep Clean & Move-In/Out',
     desc: 'Perfect for first-time clients or moving days. The full Luma-touch detail across every surface.',
     rows: [
-      { name: 'Deep Cleaning', price: '$250+' },
+      { name: 'Deep Cleaning', price: '$350+' },
       { name: 'Move-In / Move-Out', price: '$300+' },
       { name: 'Baseboards & Doors', price: 'Included' },
       { name: 'Sanitized Appliances', price: 'Included' },
