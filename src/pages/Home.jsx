@@ -3,14 +3,6 @@ import { Home, Building2, Sparkles, Package, Star } from 'lucide-react'
 import cleanImg from '../assets/clean.jpg'
 import FadeIn from '../components/FadeIn'
 import heroBg from '../assets/back.jpg'
-import resultImg1 from '../assets/IMG1.jpg'
-import resultImg2 from '../assets/IMG2.jpg'
-import resultImg3 from '../assets/IMG3.jpg'
-import resultImg4 from '../assets/IMG4.jpg'
-import resultImg5 from '../assets/IMG5.jpg'
-import resultImg6 from '../assets/IMG6.jpg'
-import resultImg7 from '../assets/IMG7.jpg'
-import resultImg8 from '../assets/IMG8.jpg'
 
 const reviews = [
   {
@@ -63,46 +55,46 @@ const results = [
     title: 'Bathroom Deep Clean',
     category: 'Before & After',
     images: [
-      { src: resultImg2, label: 'Before', alt: 'Toilet before a Luma bathroom deep clean' },
-      { src: resultImg1, label: 'After', alt: 'Toilet after a Luma bathroom deep clean' },
+      { src: '/gallery/IMG2.jpg', label: 'Before', alt: 'Toilet before a Luma bathroom deep clean' },
+      { src: '/gallery/IMG1.jpg', label: 'After', alt: 'Toilet after a Luma bathroom deep clean' },
     ],
   },
   {
     title: 'Bathroom Detail Cleaning',
     category: 'Residential',
-    image: resultImg3,
+    image: '/gallery/IMG3.jpg',
     alt: 'Two freshly cleaned residential bathroom sinks',
   },
   {
     title: 'Sink & Fixture Detailing',
     category: 'Residential',
-    image: resultImg4,
+    image: '/gallery/IMG4.jpg',
     alt: 'Polished bathroom sinks and fixtures after cleaning',
   },
   {
     title: 'Whole-Home Reset',
     category: 'Move In / Move Out',
-    image: resultImg5,
+    image: '/gallery/IMG5.jpg',
     alt: 'Freshly cleaned empty home with vacuumed carpet',
   },
   {
     title: 'Construction Dust Removal',
     category: 'Post-Construction · Before & After',
-    image: resultImg6,
+    image: '/gallery/IMG6.jpg',
     contain: true,
     alt: 'Before and after post-construction cleaning details',
   },
   {
     title: 'High-Touch Detail Cleaning',
     category: 'Move In / Move Out · Before & After',
-    image: resultImg7,
+    image: '/gallery/IMG7.jpg',
     contain: true,
     alt: 'Before and after cleaning of switches and wall fixtures',
   },
   {
     title: 'Kitchen Detail Cleaning',
     category: 'Residential',
-    image: resultImg8,
+    image: '/gallery/IMG8.jpg',
     alt: 'Polished stainless steel kitchen sink after cleaning',
   },
 ]
