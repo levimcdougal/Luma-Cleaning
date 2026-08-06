@@ -811,6 +811,123 @@
   border-radius: var(--radius) var(--radius) 0 0;
 }
 
+/* ── Results Gallery ────────────────────────── */
+.results-section {
+  background: var(--cream);
+}
+
+@keyframes resultsMarquee {
+  from { transform: translateX(calc(-50% - 12px)); }
+  to { transform: translateX(0); }
+}
+
+.results-marquee {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  padding: 6px 0 18px;
+}
+
+.results-track {
+  display: flex;
+  width: max-content;
+  gap: 24px;
+  animation: resultsMarquee 42s linear infinite;
+  will-change: transform;
+}
+
+.results-marquee:hover .results-track {
+  animation-play-state: paused;
+}
+
+.result-card {
+  flex: 0 0 340px;
+  height: 100%;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid #e8ecf7;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.result-image,
+.result-pair {
+  width: 100%;
+  height: 340px;
+}
+
+.result-image {
+  display: block;
+  object-fit: contain;
+  background: #e9edf5;
+}
+
+.result-image-contain {
+  object-fit: contain;
+  background: #e9edf5;
+}
+
+.result-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.result-pair-item {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: #e9edf5;
+}
+
+.result-pair-item + .result-pair-item {
+  border-left: 2px solid var(--white);
+}
+
+.result-pair-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.result-pair-item span {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 5px 9px;
+  border-radius: 4px;
+  background: rgba(6, 14, 40, 0.82);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.result-caption {
+  padding: 18px 20px 20px;
+}
+
+.result-caption span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.result-caption h3 {
+  font-size: 18px;
+}
+
 .service-card-full h2 {
   font-size: 24px;
   font-weight: 800;
@@ -1254,6 +1371,10 @@
     grid-template-columns: 1fr;
   }
 
+  .result-card {
+    flex-basis: min(82vw, 340px);
+  }
+
   .why-split {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -1283,6 +1404,16 @@
   .hours-banner-divider {
     width: 52px;
     height: 1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .results-marquee {
+    overflow-x: auto;
+  }
+
+  .results-track {
+    animation: none;
   }
 }
 

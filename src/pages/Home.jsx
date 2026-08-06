@@ -3,6 +3,14 @@ import { Home, Building2, Sparkles, Package, Star } from 'lucide-react'
 import cleanImg from '../assets/clean.jpg'
 import FadeIn from '../components/FadeIn'
 import heroBg from '../assets/back.jpg'
+import resultImg1 from '../assets/IMG1.jpg'
+import resultImg2 from '../assets/IMG2.jpg'
+import resultImg3 from '../assets/IMG3.jpg'
+import resultImg4 from '../assets/IMG4.jpg'
+import resultImg5 from '../assets/IMG5.jpg'
+import resultImg6 from '../assets/IMG6.jpg'
+import resultImg7 from '../assets/IMG7.jpg'
+import resultImg8 from '../assets/IMG8.jpg'
 
 const reviews = [
   {
@@ -47,6 +55,55 @@ const services = [
     Icon: Package,
     title: 'Move In / Move Out',
     desc: "Moving is stressful enough. Let Luma handle the clean so your transition is one less thing to worry about.",
+  },
+]
+
+const results = [
+  {
+    title: 'Bathroom Deep Clean',
+    category: 'Before & After',
+    images: [
+      { src: resultImg2, label: 'Before', alt: 'Toilet before a Luma bathroom deep clean' },
+      { src: resultImg1, label: 'After', alt: 'Toilet after a Luma bathroom deep clean' },
+    ],
+  },
+  {
+    title: 'Bathroom Detail Cleaning',
+    category: 'Residential',
+    image: resultImg3,
+    alt: 'Two freshly cleaned residential bathroom sinks',
+  },
+  {
+    title: 'Sink & Fixture Detailing',
+    category: 'Residential',
+    image: resultImg4,
+    alt: 'Polished bathroom sinks and fixtures after cleaning',
+  },
+  {
+    title: 'Whole-Home Reset',
+    category: 'Move In / Move Out',
+    image: resultImg5,
+    alt: 'Freshly cleaned empty home with vacuumed carpet',
+  },
+  {
+    title: 'Construction Dust Removal',
+    category: 'Post-Construction · Before & After',
+    image: resultImg6,
+    contain: true,
+    alt: 'Before and after post-construction cleaning details',
+  },
+  {
+    title: 'High-Touch Detail Cleaning',
+    category: 'Move In / Move Out · Before & After',
+    image: resultImg7,
+    contain: true,
+    alt: 'Before and after cleaning of switches and wall fixtures',
+  },
+  {
+    title: 'Kitchen Detail Cleaning',
+    category: 'Residential',
+    image: resultImg8,
+    alt: 'Polished stainless steel kitchen sink after cleaning',
   },
 ]
 
@@ -118,6 +175,49 @@ export default function HomePage() {
               <Link to="/contact" className="btn-primary why-cta">Get a Free Quote</Link>
             </div>
           </div></FadeIn>
+        </div>
+      </section>
+
+      {/* Results Gallery */}
+      <section className="section results-section">
+        <div className="section-inner">
+          <FadeIn><div className="section-header">
+            <p className="section-label">Our Work</p>
+            <h2 className="section-title">Real Results, Down to the Details</h2>
+            <p className="section-subtitle">
+              A look at recent residential, move-in/move-out, and post-construction cleaning projects.
+            </p>
+          </div></FadeIn>
+          <FadeIn delay={100}>
+            <div className="results-marquee" aria-label="Recent cleaning results">
+              <div className="results-track">
+                {[...results, ...results].map(({ title, category, image, images, alt, contain }, i) => (
+                <figure
+                  className="result-card"
+                  key={`${title}-${i}`}
+                  aria-hidden={i >= results.length ? 'true' : undefined}
+                >
+                  {images ? (
+                    <div className="result-pair">
+                      {images.map(item => (
+                        <div className="result-pair-item" key={item.label}>
+                          <img src={item.src} alt={item.alt} />
+                          <span>{item.label}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <img src={image} alt={alt} className={`result-image${contain ? ' result-image-contain' : ''}`} />
+                  )}
+                  <figcaption className="result-caption">
+                    <span>{category}</span>
+                    <h3>{title}</h3>
+                  </figcaption>
+                </figure>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
