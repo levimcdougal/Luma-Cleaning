@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom'
 import { Home, Building2, Sparkles, Package, Star } from 'lucide-react'
 import cleanImg from '../assets/clean.jpg'
+import restaurantBefore1 from '../assets/b1.jpg'
+import restaurantAfter1 from '../assets/a1.jpg'
+import restaurantBefore2 from '../assets/b2.jpg'
+import restaurantAfter2 from '../assets/a2.jpg'
+import restaurantBefore3 from '../assets/b3.jpg'
+import restaurantAfter3 from '../assets/a3.jpg'
 import FadeIn from '../components/FadeIn'
 import heroBg from '../assets/back.jpg'
 
@@ -31,6 +37,7 @@ const services = [
   {
     Icon: Home,
     title: 'Residential',
+    gallery: 'residential',
     desc: 'We bring hotel-level cleanliness to your home. Every room, every surface, every detail — done right.',
   },
   {
@@ -53,6 +60,7 @@ const services = [
 const results = [
   {
     title: 'Bathroom Deep Clean',
+    service: 'deep-cleaning',
     category: 'Before & After',
     images: [
       { src: '/gallery/IMG2.jpg', label: 'Before', alt: 'Toilet before a Luma bathroom deep clean' },
@@ -61,18 +69,21 @@ const results = [
   },
   {
     title: 'Bathroom Detail Cleaning',
+    service: 'residential',
     category: 'Residential',
     image: '/gallery/IMG3.jpg',
     alt: 'Two freshly cleaned residential bathroom sinks',
   },
   {
     title: 'Sink & Fixture Detailing',
+    service: 'residential',
     category: 'Residential',
     image: '/gallery/IMG4.jpg',
     alt: 'Polished bathroom sinks and fixtures after cleaning',
   },
   {
     title: 'Whole-Home Reset',
+    service: 'move-in-move-out',
     category: 'Move In / Move Out',
     image: '/gallery/IMG5.jpg',
     alt: 'Freshly cleaned empty home with vacuumed carpet',
@@ -86,6 +97,7 @@ const results = [
   },
   {
     title: 'High-Touch Detail Cleaning',
+    service: 'move-in-move-out',
     category: 'Move In / Move Out · Before & After',
     image: '/gallery/IMG7.jpg',
     contain: true,
@@ -93,9 +105,37 @@ const results = [
   },
   {
     title: 'Kitchen Detail Cleaning',
+    service: 'residential',
     category: 'Residential',
     image: '/gallery/IMG8.jpg',
     alt: 'Polished stainless steel kitchen sink after cleaning',
+  },
+  {
+    title: 'Kitchen Floor Detail',
+    service: 'restaurant-cleaning',
+    category: 'Restaurant · Before & After',
+    images: [
+      { src: restaurantBefore1, label: 'Before', alt: 'Restaurant kitchen floor before cleaning' },
+      { src: restaurantAfter1, label: 'After', alt: 'Restaurant kitchen floor after cleaning' },
+    ],
+  },
+  {
+    title: 'Bar Surface Detail',
+    service: 'restaurant-cleaning',
+    category: 'Restaurant · Before & After',
+    images: [
+      { src: restaurantBefore2, label: 'Before', alt: 'Restaurant bar surface before cleaning' },
+      { src: restaurantAfter2, label: 'After', alt: 'Restaurant bar surface after cleaning' },
+    ],
+  },
+  {
+    title: 'Dining Area Floor Detail',
+    service: 'restaurant-cleaning',
+    category: 'Restaurant · Before & After',
+    images: [
+      { src: restaurantBefore3, label: 'Before', alt: 'Restaurant dining area floor before cleaning' },
+      { src: restaurantAfter3, label: 'After', alt: 'Restaurant dining area floor after cleaning' },
+    ],
   },
 ]
 
@@ -129,14 +169,16 @@ export default function HomePage() {
           </div></FadeIn>
           <FadeIn delay={150}>
           <div className="services-grid">
-            {services.map(({ Icon, title, desc }) => (
+            {services.map(({ Icon, title, desc, gallery }) => (
               <div className="service-card" key={title}>
                 <div className="service-icon">
                   <Icon size={26} color="var(--blue)" strokeWidth={1.75} />
                 </div>
                 <h3>{title}</h3>
                 <p>{desc}</p>
-                <Link to="/services" className="service-link">Learn more →</Link>
+                <Link to={gallery ? `/gallery/${gallery}` : '/services'} className="service-link">
+                  {gallery ? 'View photos →' : 'Learn more →'}
+                </Link>
               </div>
             ))}
           </div>
@@ -171,7 +213,7 @@ export default function HomePage() {
       </section>
 
       {/* Results Gallery */}
-      <section className="section results-section">
+      <section className="section results-section" id="gallery">
         <div className="section-inner">
           <FadeIn><div className="section-header">
             <p className="section-label">Our Work</p>

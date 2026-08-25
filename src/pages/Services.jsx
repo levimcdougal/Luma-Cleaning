@@ -13,6 +13,7 @@ const services = [
     Icon: Home,
     image: resImg,
     title: 'Residential Cleaning',
+    gallery: 'residential',
     desc: 'Your home should feel like a sanctuary. Luma covers every room, every corner, and every surface — leaving your space fresh, bright, and genuinely clean.',
     includes: [
       'Kitchen deep clean (counters, appliances, sink)',
@@ -83,6 +84,7 @@ const services = [
     Icon: Utensils,
     image: foodImg,
     title: 'Restaurant Cleaning',
+    gallery: 'restaurant-cleaning',
     desc: 'Food-service spaces demand a higher standard of clean. Luma keeps your kitchen, dining area, and prep surfaces spotless, health-code compliant, and guest-ready every time you open your doors.',
     includes: [
       'Commercial kitchen degreasing and sanitizing',
@@ -117,7 +119,7 @@ const pricingPlans = [
     desc: 'Perfect for first-time clients or moving days. The full Luma-touch detail across every surface.',
     rows: [
       { name: 'Deep Cleaning', price: '$350+' },
-      { name: 'Move-In / Move-Out', price: '$300+' },
+      { name: 'Move-In / Move-Out', price: '$400.00+' },
       { name: 'Baseboards & Doors', price: 'Included' },
       { name: 'Sanitized Appliances', price: 'Included' },
     ],
@@ -163,7 +165,7 @@ export default function Services() {
       <section className="section">
         <div className="section-inner">
           <div className="services-full-grid">
-            {services.map(({ Icon, image, title, desc, includes }, i) => (
+            {services.map(({ Icon, image, title, gallery, desc, includes }, i) => (
               <FadeIn key={title} delay={i * 100}>
               <div className="service-card-full">
                 {image
@@ -172,7 +174,8 @@ export default function Services() {
                       <Icon size={28} color="var(--blue)" strokeWidth={1.75} />
                     </div>
                 }
-                <h2>{title}</h2>
+                <h2>{gallery ? <Link to={`/gallery/${gallery}`} className="service-gallery-link">{title}</Link> : title}</h2>
+                {gallery && <Link to={`/gallery/${gallery}`} className="service-link">View photos →</Link>}
                 <p>{desc}</p>
                 <div className="service-includes">
                   <h4>What's Included</h4>
@@ -195,7 +198,7 @@ export default function Services() {
           <FadeIn><div className="section-header">
             <p className="section-label">Pricing</p>
             <h2 className="section-title">Simple, Transparent Pricing</h2>
-            <p className="section-subtitle">No hidden fees. No surprises. Just a fair price for a brilliant clean.</p>
+            <p className="section-subtitle">Pricing reflects the square footage of the home and the total number of bedrooms and bathrooms.</p>
           </div></FadeIn>
 
           <FadeIn delay={100}><div className="pricing-grid">

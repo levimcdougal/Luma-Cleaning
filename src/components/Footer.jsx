@@ -21,12 +21,12 @@ export default function Footer() {
           <div className="footer-col footer-col-services">
             <h4>Services</h4>
             <ul>
-              <li><Link to="/services">Residential</Link></li>
+              <li><Link to="/gallery/residential">Residential</Link></li>
               <li><Link to="/services">Commercial</Link></li>
               <li><Link to="/services">Deep Clean</Link></li>
               <li><Link to="/services">Move In / Move Out</Link></li>
               <li><Link to="/services">Office Cleaning</Link></li>
-              <li><Link to="/services">Restaurant Cleaning</Link></li>
+              <li><Link to="/gallery/restaurant-cleaning">Restaurant Cleaning</Link></li>
             </ul>
           </div>
 
