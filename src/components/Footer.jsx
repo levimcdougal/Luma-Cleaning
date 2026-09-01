@@ -24,7 +24,7 @@ export default function Footer() {
               <li><Link to="/gallery/residential">Residential</Link></li>
               <li><Link to="/services">Commercial</Link></li>
               <li><Link to="/services">Deep Clean</Link></li>
-              <li><Link to="/services">Move In / Move Out</Link></li>
+              <li><Link to="/gallery/move-in-move-out">Move In / Move Out</Link></li>
               <li><Link to="/services">Office Cleaning</Link></li>
               <li><Link to="/gallery/restaurant-cleaning">Restaurant Cleaning</Link></li>
             </ul>

@@ -14,6 +14,17 @@ import residentialAfter3 from '../assets/a6.jpg'
 import residentialOven from '../assets/pic.jpg'
 import residentialMicrowave from '../assets/pic2.jpg'
 import residentialCarpet from '../assets/pic3.jpg'
+import residentialCleanOven from '../assets/IMG_0586.jpg'
+import residentialCleanBathroom from '../assets/IMG_0587.jpg'
+import residentialKitchenFloor from '../assets/IMG_0589.jpg'
+import moveBefore1 from '../assets/b8.jpg'
+import moveAfter1 from '../assets/a8.jpg'
+import moveBefore2 from '../assets/b9.jpg'
+import moveAfter2 from '../assets/a9.jpg'
+import moveBefore3 from '../assets/b10.jpg'
+import moveAfter3 from '../assets/a10.jpg'
+import moveBefore4 from '../assets/b11.jpg'
+import moveAfter4 from '../assets/a11.jpg'
 
 const galleries = {
   residential: {
@@ -56,6 +67,55 @@ const galleries = {
         title: 'Freshly Cleaned Carpet',
         image: residentialCarpet,
         alt: 'Freshly cleaned residential living room carpet',
+      },
+      {
+        title: 'Oven Interior Detail',
+        image: residentialCleanOven,
+        alt: 'Spotless residential oven interior and polished racks after cleaning',
+      },
+      {
+        title: 'Full Bathroom Refresh',
+        image: residentialCleanBathroom,
+        alt: 'Freshly cleaned residential bathroom with polished fixtures and tile floor',
+      },
+      {
+        title: 'Kitchen Floor Finish',
+        image: residentialKitchenFloor,
+        alt: 'Freshly cleaned residential kitchen floor and cabinets',
+      },
+    ],
+  },
+  'move-in-move-out': {
+    title: 'Move In / Move Out Cleaning Results',
+    description: 'Before-and-after results from a recent whole-home move cleaning project.',
+    results: [
+      {
+        title: 'Living Room Floor Reset',
+        images: [
+          { src: moveBefore1, label: 'Before', alt: 'Living room hardwood floor before move cleaning' },
+          { src: moveAfter1, label: 'After', alt: 'Living room hardwood floor after move cleaning' },
+        ],
+      },
+      {
+        title: 'Dining Area Floor Reset',
+        images: [
+          { src: moveBefore2, label: 'Before', alt: 'Dining area hardwood floor before move cleaning' },
+          { src: moveAfter2, label: 'After', alt: 'Dining area hardwood floor after move cleaning' },
+        ],
+      },
+      {
+        title: 'Freezer Deep Clean',
+        images: [
+          { src: moveBefore3, label: 'Before', alt: 'Freezer interior before move cleaning' },
+          { src: moveAfter3, label: 'After', alt: 'Freezer interior after move cleaning' },
+        ],
+      },
+      {
+        title: 'Stovetop Deep Clean',
+        images: [
+          { src: moveBefore4, label: 'Before', alt: 'Gas stovetop before move cleaning' },
+          { src: moveAfter4, label: 'After', alt: 'Gas stovetop after move cleaning' },
+        ],
       },
     ],
   },

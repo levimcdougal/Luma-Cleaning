@@ -53,6 +53,7 @@ const services = [
   {
     Icon: Package,
     title: 'Move In / Move Out',
+    gallery: 'move-in-move-out',
     desc: "Moving is stressful enough. Let Luma handle the clean so your transition is one less thing to worry about.",
   },
 ]

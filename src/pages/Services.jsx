@@ -56,6 +56,7 @@ const services = [
     Icon: Package,
     image: moveImg,
     title: 'Move In / Move Out',
+    gallery: 'move-in-move-out',
     desc: "Moving is already stressful — your clean shouldn't be. Whether you're leaving a place or settling into a new one, Luma handles every inch so you can focus on the move itself.",
     includes: [
       'Interior cabinet and drawer cleaning',
