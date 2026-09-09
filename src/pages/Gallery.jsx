@@ -25,8 +25,36 @@ import moveBefore3 from '../assets/b10.jpg'
 import moveAfter3 from '../assets/a10.jpg'
 import moveBefore4 from '../assets/b11.jpg'
 import moveAfter4 from '../assets/a11.jpg'
+import commercialBefore1 from '../assets/b12.jpg'
+import commercialAfter1 from '../assets/a12.jpg'
+import commercialBefore2 from '../assets/b13.jpg'
+import commercialAfter2 from '../assets/a13.jpg'
+import commercialFloor from '../assets/a14.jpg'
 
 const galleries = {
+  'commercial-cleaning': {
+    title: 'Commercial Cleaning Results',
+    category: 'Commercial Cleaning',
+    additionalLabel: 'More Commercial Results',
+    description: 'Before-and-after results from a recent commercial cleaning project.',
+    results: [
+      {
+        title: 'Play Area Mat Cleaning',
+        images: [
+          { src: commercialBefore1, label: 'Before', alt: 'Play area foam mats before commercial cleaning' },
+          { src: commercialAfter1, label: 'After', alt: 'Play area foam mats after commercial cleaning' },
+        ],
+      },
+      {
+        title: 'Classroom Floor Cleaning',
+        images: [
+          { src: commercialBefore2, label: 'Before', alt: 'Classroom floor before commercial cleaning' },
+          { src: commercialAfter2, label: 'After', alt: 'Classroom floor after commercial cleaning' },
+          { src: commercialFloor, label: 'After', alt: 'Shining classroom floor after commercial cleaning' },
+        ],
+      },
+    ],
+  },
   residential: {
     title: 'Residential Cleaning Results',
     description: 'Before-and-after results from recent residential cleaning projects.',
@@ -148,13 +176,16 @@ const galleries = {
   },
 }
 
-function GalleryCard({ title, image, images, alt, contain }) {
+function GalleryCard({ title, image, images, alt, contain, category = 'Residential Cleaning' }) {
+  const afterPhotos = images?.filter(item => item.label === 'After') || []
+  const hasMultipleAfters = afterPhotos.length > 1
+
   return (
-    <figure className="result-card gallery-page-card">
+    <figure className={`result-card gallery-page-card${hasMultipleAfters ? ' gallery-multi-after' : ''}`}>
       {images ? (
         <div className="result-pair">
           {images.map(item => (
-            <div className="result-pair-item" key={item.label}>
+            <div className="result-pair-item" key={item.src}>
               <a href={item.src} target="_blank" rel="noreferrer" aria-label={`View full-size ${item.label.toLowerCase()} photo`}>
                 <img src={item.src} alt={item.alt} />
               </a>
@@ -168,7 +199,7 @@ function GalleryCard({ title, image, images, alt, contain }) {
         </a>
       )}
       <figcaption className="result-caption">
-        <span>{images ? 'Before & After' : 'Residential Cleaning'}</span>
+        <span>{images ? 'Before & After' : category}</span>
         <h2>{title}</h2>
       </figcaption>
     </figure>
@@ -204,11 +235,11 @@ export default function Gallery() {
           {singleResults.length > 0 && (
             <div className="gallery-additional-results">
               <div className="section-header gallery-section-header">
-                <p className="section-label">More Residential Results</p>
+                <p className="section-label">{gallery.additionalLabel || 'More Residential Results'}</p>
                 <h2 className="section-title">Finished Spaces</h2>
               </div>
               <div className="gallery-page-grid gallery-page-grid-singles">
-                {singleResults.map(result => <GalleryCard {...result} key={result.title} />)}
+                {singleResults.map(result => <GalleryCard {...result} category={gallery.category} key={result.title} />)}
               </div>
             </div>
           )}

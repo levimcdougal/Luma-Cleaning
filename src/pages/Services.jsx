@@ -28,6 +28,7 @@ const services = [
     Icon: Building2,
     image: comImg,
     title: 'Commercial Cleaning',
+    gallery: 'commercial-cleaning',
     desc: 'A clean business makes a strong impression. Luma offers flexible scheduling — including after-hours — so your space stays spotless without interrupting your operations.',
     includes: [
       'Common areas, lobbies, and hallways',

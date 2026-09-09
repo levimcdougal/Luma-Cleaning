@@ -43,6 +43,7 @@ const services = [
   {
     Icon: Building2,
     title: 'Commercial',
+    gallery: 'commercial-cleaning',
     desc: 'A spotless workplace reflects a sharp business. We keep your space looking its best, every single day.',
   },
   {
