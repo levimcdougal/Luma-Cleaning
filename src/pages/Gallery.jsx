@@ -17,6 +17,21 @@ import residentialCarpet from '../assets/pic3.jpg'
 import residentialCleanOven from '../assets/IMG_0586.jpg'
 import residentialCleanBathroom from '../assets/IMG_0587.jpg'
 import residentialKitchenFloor from '../assets/IMG_0589.jpg'
+import showerGlassBefore from '../assets/IMG_5331.jpg'
+import showerDoorBefore from '../assets/IMG_5332.jpg'
+import showerHandleBefore from '../assets/IMG_5333.jpg'
+import showerFixtureBefore from '../assets/IMG_5334 (1).jpg'
+import showerFixtureAfter from '../assets/IMG_5335.jpg'
+import showerHandleAfter from '../assets/IMG_5336.jpg'
+import showerDoorAfter from '../assets/IMG_5337.jpg'
+import showerGlassAfter from '../assets/IMG_5338.jpg'
+import residentialHallway from '../assets/IMG_4985.jpg'
+import residentialKitchen from '../assets/IMG_4986.jpg'
+import residentialVanity from '../assets/IMG_5155.jpg'
+import residentialFaucet from '../assets/IMG_5265.jpg'
+import residentialSink from '../assets/IMG_5266.jpg'
+import residentialTileShower from '../assets/IMG_5295.jpg'
+import residentialGlassShower from '../assets/IMG_5365.jpg'
 import moveBefore1 from '../assets/b8.jpg'
 import moveAfter1 from '../assets/a8.jpg'
 import moveBefore2 from '../assets/b9.jpg'
@@ -30,8 +45,52 @@ import commercialAfter1 from '../assets/a12.jpg'
 import commercialBefore2 from '../assets/b13.jpg'
 import commercialAfter2 from '../assets/a13.jpg'
 import commercialFloor from '../assets/a14.jpg'
+import deepKeypadBefore from '../assets/IMG_5118.jpg'
+import deepKeypadAfter from '../assets/IMG_5121.jpg'
+import deepFaucetBefore from '../assets/IMG_5200.jpg'
+import deepFaucetAfter from '../assets/IMG_5201.jpg'
+import deepTubBefore from '../assets/IMG_5206.jpg'
+import deepTubAfter from '../assets/IMG_5208.jpg'
+import deepSoakingTubBefore from '../assets/IMG_5296 (1).jpg'
+import deepSoakingTubAfter from '../assets/IMG_5302.jpg'
 
 const galleries = {
+  'deep-cleaning': {
+    title: 'Deep Cleaning Results',
+    category: 'Deep Cleaning',
+    additionalLabel: 'More Deep Cleaning Results',
+    description: 'Before-and-after results from recent deep cleaning projects.',
+    results: [
+      {
+        title: 'Bathtub Buildup Removal',
+        images: [
+          { src: deepSoakingTubBefore, label: 'Before', alt: 'Bathtub with visible residue and buildup before deep cleaning' },
+          { src: deepSoakingTubAfter, label: 'After', alt: 'Clean bathtub after residue and buildup removal' },
+        ],
+      },
+      {
+        title: 'Tub & Shower Deep Clean',
+        images: [
+          { src: deepTubBefore, label: 'Before', alt: 'Bathtub beneath a glass shower screen before deep cleaning' },
+          { src: deepTubAfter, label: 'After', alt: 'Refreshed bathtub beneath a glass shower screen after deep cleaning' },
+        ],
+      },
+      {
+        title: 'Faucet & Sink Detail',
+        images: [
+          { src: deepFaucetBefore, label: 'Before', alt: 'Metal faucet and sink surround with residue before deep cleaning' },
+          { src: deepFaucetAfter, label: 'After', alt: 'Clean metal faucet and sink surround after detailed cleaning' },
+        ],
+      },
+      {
+        title: 'Wall Keypad Detail',
+        images: [
+          { src: deepKeypadBefore, label: 'Before', alt: 'Wall-mounted alarm keypad with accumulated grime before cleaning' },
+          { src: deepKeypadAfter, label: 'After', alt: 'Wall-mounted alarm keypad after detailed cleaning' },
+        ],
+      },
+    ],
+  },
   'commercial-cleaning': {
     title: 'Commercial Cleaning Results',
     category: 'Commercial Cleaning',
@@ -59,6 +118,34 @@ const galleries = {
     title: 'Residential Cleaning Results',
     description: 'Before-and-after results from recent residential cleaning projects.',
     results: [
+      {
+        title: 'Shower Glass Deep Clean',
+        images: [
+          { src: showerGlassBefore, label: 'Before', alt: 'Cloudy shower glass with buildup before cleaning' },
+          { src: showerGlassAfter, label: 'After', alt: 'Clear shower glass after deep cleaning' },
+        ],
+      },
+      {
+        title: 'Shower Door Refresh',
+        images: [
+          { src: showerDoorBefore, label: 'Before', alt: 'Shower door with cloudy residue before cleaning' },
+          { src: showerDoorAfter, label: 'After', alt: 'Clean glass shower door after residue removal' },
+        ],
+      },
+      {
+        title: 'Shower Door & Handle Detail',
+        images: [
+          { src: showerHandleBefore, label: 'Before', alt: 'Shower glass and chrome door handle before cleaning' },
+          { src: showerHandleAfter, label: 'After', alt: 'Polished chrome handle and clear shower glass after cleaning' },
+        ],
+      },
+      {
+        title: 'Shower Fixture Polish',
+        images: [
+          { src: showerFixtureBefore, label: 'Before', alt: 'Shower control and chrome trim with buildup before cleaning' },
+          { src: showerFixtureAfter, label: 'After', alt: 'Clean shower control and polished chrome trim after cleaning' },
+        ],
+      },
       {
         title: 'Bathtub Deep Clean',
         images: [
@@ -110,6 +197,41 @@ const galleries = {
         title: 'Kitchen Floor Finish',
         image: residentialKitchenFloor,
         alt: 'Freshly cleaned residential kitchen floor and cabinets',
+      },
+      {
+        title: 'Entryway Floor Refresh',
+        image: residentialHallway,
+        alt: 'Clean wood flooring and white baseboards in a residential entryway',
+      },
+      {
+        title: 'Kitchen & Island Refresh',
+        image: residentialKitchen,
+        alt: 'Clean residential kitchen with a white island, cabinets, and wood flooring',
+      },
+      {
+        title: 'Bathroom Vanity Detail',
+        image: residentialVanity,
+        alt: 'Clean bathroom vanity with a rectangular sink and neatly arranged towels and baskets',
+      },
+      {
+        title: 'Chrome Faucet Polish',
+        image: residentialFaucet,
+        alt: 'Polished chrome bathroom faucet and handles on a stone countertop',
+      },
+      {
+        title: 'Bathroom Sink Refresh',
+        image: residentialSink,
+        alt: 'Clean white bathroom sink with chrome fixtures and a stone countertop',
+      },
+      {
+        title: 'Subway Tile Shower Clean',
+        image: residentialTileShower,
+        alt: 'Clean glass shower enclosure with white subway tile and a hexagonal tile floor',
+      },
+      {
+        title: 'Glass Shower & Bathroom Detail',
+        image: residentialGlassShower,
+        alt: 'Clean bathroom with a glass shower enclosure, brass fixtures, and white tile',
       },
     ],
   },

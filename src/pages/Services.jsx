@@ -43,6 +43,7 @@ const services = [
     Icon: Sparkles,
     image: deepImg,
     title: 'Deep Clean',
+    gallery: 'deep-cleaning',
     desc: 'When a regular clean isn\'t enough, Luma\'s deep clean goes all the way — built-up grime, hard-to-reach areas, and every surface that\'s been overlooked. Perfect for first-time bookings or seasonal resets.',
     includes: [
       'Inside oven, fridge, and microwave',
@@ -107,10 +108,10 @@ const pricingPlans = [
     subtitle: 'Priced By Home Layout',
     desc: 'Dusting, vacuuming, mopping, kitchen surface wiping, and bathroom cleaning — the dependable refresh.',
     rows: [
-      { name: '1 Bed / 1 Bath', price: '$100' },
-      { name: '2 Bed / 2 Bath', price: '$140' },
-      { name: '3 Bed / 2 Bath', price: '$180' },
-      { name: '4 Bed / 2+ Bath', price: '$220' },
+      { name: '1 Bed / 1 Bath', price: '$100+' },
+      { name: '2 Bed / 2 Bath', price: '$140+' },
+      { name: '3 Bed / 2 Bath', price: '$180+' },
+      { name: '4 Bed / 2+ Bath', price: '$220+' },
     ],
   },
   {
@@ -133,8 +134,8 @@ const pricingPlans = [
     subtitle: 'Customized To Your Site',
     desc: 'Offices, retail floors, and post-construction jobs handled with industrial care and strict checklists.',
     rows: [
-      { name: 'Office & Commercial', price: '$40 / hr' },
-      { name: 'Post-Construction', price: '$0.45–$0.75 / sq ft' },
+      { name: 'Office & Commercial', price: '$40+ / hr' },
+      { name: 'Post-Construction', price: '$0.45–$0.75+ / sq ft' },
       { name: 'Project Minimum', price: '$300+' },
       { name: 'Dust, Trim & Detailing', price: 'Included' },
     ],
@@ -142,10 +143,10 @@ const pricingPlans = [
 ]
 
 const addOns = [
-  { name: 'Inside Refrigerator', price: '$35' },
-  { name: 'Inside Oven', price: '$50' },
-  { name: 'Interior Windows', price: '$5 / window' },
-  { name: 'Laundry', price: '$25 / load' },
+  { name: 'Inside Refrigerator', price: '$35+' },
+  { name: 'Inside Oven', price: '$50+' },
+  { name: 'Interior Windows', price: '$5+ / window' },
+  { name: 'Laundry', price: '$25+ / load' },
   { name: 'Pet Hair Removal', price: '$25+' },
   { name: 'Trash Removal', price: '$20+' },
 ]

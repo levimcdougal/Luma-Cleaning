@@ -9,6 +9,8 @@ import restaurantBefore3 from '../assets/b3.jpg'
 import restaurantAfter3 from '../assets/a3.jpg'
 import FadeIn from '../components/FadeIn'
 import heroBg from '../assets/back.jpg'
+import cleaningVideo1 from '../assets/cleaning-video-1.mp4'
+import cleaningVideo2 from '../assets/cleaning-video-2.mp4'
 
 const reviews = [
   {
@@ -49,6 +51,7 @@ const services = [
   {
     Icon: Sparkles,
     title: 'Deep Clean',
+    gallery: 'deep-cleaning',
     desc: 'When your space needs more than the basics, our deep clean goes further — no corner left behind.',
   },
   {
@@ -254,6 +257,26 @@ export default function HomePage() {
               </div>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      <section className="section section-alt" aria-labelledby="cleaning-videos-title">
+        <div className="section-inner">
+          <div className="section-header">
+            <p className="section-label">A Closer Look</p>
+            <h2 className="section-title" id="cleaning-videos-title">See Our Work in Motion</h2>
+            <p className="section-subtitle">Watch highlights from recent Luma cleaning projects.</p>
+          </div>
+          <div className="cleaning-videos-grid">
+            {[cleaningVideo1, cleaningVideo2].map((src, index) => (
+              <figure className="result-card cleaning-video-card" key={src}>
+                <video controls playsInline preload="metadata" aria-label={`Luma cleaning project video ${index + 1}`}>
+                  <source src={src} type="video/mp4" />
+                  Your browser does not support video playback. <a href={src}>Download the video</a>.
+                </video>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 

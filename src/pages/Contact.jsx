@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Phone, MessageSquare, Mail, ClipboardList, CalendarCheck, Sparkles, ThumbsUp, ChevronDown } from 'lucide-react'
+import { Phone, MessageSquare, Mail, CalendarCheck, Sparkles, ThumbsUp, ChevronDown } from 'lucide-react'
 import FadeIn from '../components/FadeIn'
 
 const contactMethods = [

@@ -840,6 +840,31 @@
   animation-play-state: paused;
 }
 
+.cleaning-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.cleaning-video-card {
+  margin: 0;
+  min-width: 0;
+}
+
+.cleaning-video-card video {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 45vw, 520px);
+  object-fit: contain;
+  background: #111;
+}
+
+@media (max-width: 640px) {
+  .cleaning-videos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .result-card {
   flex: 0 0 340px;
   height: 100%;
@@ -1550,6 +1575,32 @@
 }
 
 @media (max-width: 480px) {
+  .pricing-grid,
+  .pricing-extras {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pricing-card,
+  .pricing-addons,
+  .pricing-discounts {
+    min-width: 0;
+    padding: 28px 20px;
+  }
+
+  .pricing-row {
+    flex-wrap: wrap;
+    column-gap: 12px;
+    row-gap: 4px;
+  }
+
+  .pricing-row-price {
+    margin-left: auto;
+  }
+
+  .gallery-page-grid-comparison .result-pair {
+    height: clamp(220px, 65vw, 310px);
+  }
+
   .hero {
     padding: 120px 16px 70px;
   }
