@@ -146,7 +146,6 @@ const addOns = [
   { name: 'Inside Refrigerator', price: '$40' },
   { name: 'Inside Oven', price: '$40' },
   { name: 'Interior Windows', price: '$5+ / window' },
-  { name: 'Laundry', price: '$25+ / load' },
   { name: 'Pet Hair Removal', price: '$25+' },
 ]
 
