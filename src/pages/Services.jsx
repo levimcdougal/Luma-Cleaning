@@ -143,12 +143,11 @@ const pricingPlans = [
 ]
 
 const addOns = [
-  { name: 'Inside Refrigerator', price: '$35+' },
-  { name: 'Inside Oven', price: '$50+' },
+  { name: 'Inside Refrigerator', price: '$40' },
+  { name: 'Inside Oven', price: '$40' },
   { name: 'Interior Windows', price: '$5+ / window' },
   { name: 'Laundry', price: '$25+ / load' },
   { name: 'Pet Hair Removal', price: '$25+' },
-  { name: 'Trash Removal', price: '$20+' },
 ]
 
 const discounts = [
